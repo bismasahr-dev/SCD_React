@@ -1,1 +1,68 @@
 
+.header {
+  text-align: center;
+  padding: 30px 20px;
+  background: #f2f2f2;
+}
+
+.header h1 {
+  margin: 0 0 10px;
+}
+
+.header p {
+  margin: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 30px auto;
+}
+
+.welcome {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.welcome h2 {
+  margin-bottom: 10px;
+}
+
+.section-title {
+  margin-bottom: 20px;
+}
+
+.cards {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.student-card {
+  flex: 1 1 250px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+
+.student-card h2 {
+  margin-top: 0;
+}
+
+.student-card p {
+  margin: 8px 0;
+}
+
+@media (max-width: 600px) {
+  .container {
+    width: 92%;
+  }
+
+  .cards {
+    flex-direction: column;
+  }
+
+  .student-card {
+    width: 100%;
+  }
+}
