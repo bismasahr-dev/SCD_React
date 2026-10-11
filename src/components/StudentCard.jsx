@@ -1,6 +1,7 @@
 import { useState } from 'react'
+import { Link } from 'react-router-dom'
 
-function StudentCard({ name, program, semester }) {
+function StudentCard({ id, name, program, semester }) {
 
   const [views, setViews] = useState(0)
   const [showDetails, setShowDetails] = useState(false)
@@ -10,30 +11,67 @@ function StudentCard({ name, program, semester }) {
   }
 
   return (
-    <div className="student-card">
+    <div className="card shadow-sm h-100">
 
-      <h2>{name}</h2>
+      <div className="card-body">
 
-      <p>{program}</p>
+        <h2 className="card-title">{name}</h2>
 
-      <p>Semester {semester}</p>
+        <p className="card-text">
+          {program}
+        </p>
 
-      <p>Profile Views: {views}</p>
+        <p className="card-text">
+          Semester {semester}
+        </p>
 
-      <button onClick={handleView}>
-        View Profile
-      </button>
+        <p className="card-text">
+          Profile Views: {views}
+        </p>
 
-      <button onClick={() => setShowDetails(!showDetails)}>
-        {showDetails ? 'Hide Details' : 'Show Details'}
-      </button>
+        {/* Previous Class 3 functionality */}
+        <button
+          className="btn btn-primary me-2"
+          onClick={handleView}
+        >
+          View Profile
+        </button>
 
-      {showDetails && (
-        <div>
-          <p>Email: student@example.com</p>
-          <p>Phone: 0300-1234567</p>
+        <button
+          className="btn btn-secondary"
+          onClick={() => setShowDetails(!showDetails)}
+        >
+          {showDetails ? 'Hide Details' : 'Show Details'}
+        </button>
+
+        {/* Conditional Rendering from Class 3 */}
+        {showDetails && (
+          <div className="mt-3">
+
+            <p>
+              <strong>Email:</strong> student@example.com
+            </p>
+
+            <p>
+              <strong>Phone:</strong> 0300-1234567
+            </p>
+
+          </div>
+        )}
+
+        {/* Class 4 Navigation */}
+        <div className="mt-3">
+
+          <Link
+            to={`/students/${id}`}
+            className="btn btn-outline-primary"
+          >
+            Open Student Profile
+          </Link>
+
         </div>
-      )}
+
+      </div>
 
     </div>
   )
