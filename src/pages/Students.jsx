@@ -1,7 +1,7 @@
 import StudentCard from '../components/StudentCard'
-// import StudentForm from '../components/StudentForm'
+import StudentForm from '../components/StudentForm'
 
-import StudentForm from '../components/BasicStudentForm'
+// import StudentForm from '../components/BasicStudentForm'
 
 function Students() {
   return (
