@@ -1,16 +1,27 @@
 import StudentCard from '../components/StudentCard'
+// import StudentForm from '../components/StudentForm'
+
+import StudentForm from '../components/BasicStudentForm'
 
 function Students() {
   return (
     <div className="container mt-5">
 
-      <div className="d-flex justify-content-between align-items-center mb-4">
-        <h1>Students</h1>
+      <h1 className="mb-4">
+        Students
+      </h1>
 
-        <button className="btn btn-primary">
-          Add New Student
-        </button>
+      {/* Student Form */}
+      <div className="mb-5">
+        <StudentForm/>
+   
+
       </div>
+
+      {/* Existing Students */}
+      <h2 className="mb-4">
+        Student List
+      </h2>
 
       <div className="row">
 
