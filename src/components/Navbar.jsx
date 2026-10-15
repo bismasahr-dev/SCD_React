@@ -22,8 +22,8 @@ function Navbar() {
             Students
           </Link>
 
-          <Link className="nav-link" to="/courses">
-            Courses
+          <Link className="nav-link" to="/StudentsManager">
+            StudentsManager
           </Link>
 
         </div>

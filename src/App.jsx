@@ -1,11 +1,11 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 
 import Navbar from './components/Navbar'
+import StudentManager from './components/StudentManager'
 
 import Home from './pages/Home'
 import Students from './pages/Students'
-import Courses from './pages/Courses'
-import StudentProfile from './pages/StudentProfile'
+
 
 function App() {
 
@@ -28,13 +28,8 @@ function App() {
         />
 
         <Route
-          path="/courses"
-          element={<Courses />}
-        />
-
-        <Route
-          path="/students/:id"
-          element={<StudentProfile />}
+          path="/StudentsManager"
+          element={<StudentManager/>}
         />
 
       </Routes>
